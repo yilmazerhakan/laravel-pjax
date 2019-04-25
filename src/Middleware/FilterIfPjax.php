@@ -84,7 +84,7 @@ class FilterIfPjax
         $content = $crawler->filter($container);
 
         if (!$content->count()) {
-            abort(422);
+            abort(422, 'Container does not exists!');
         }
 
         return $content->html();
